@@ -1,0 +1,18 @@
+[tool.basedpyright]
+typeCheckingMode = "standard"
+reportPrivateImportUsage = false
+reportMatchNotExhaustive = true
+reportUnnecessaryComparison = true
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff.lint]
+# Additionally include import sorting lints (and automatic formatting with --fix)
+extend-select = ["I"]
+
+[tool.pytest.ini_options]
+testpaths = "test"
+filterwarnings = [
+  "ignore::DeprecationWarning"
+]
